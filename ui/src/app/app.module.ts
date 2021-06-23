@@ -8,8 +8,8 @@ import { ShareModule } from 'src/share/share.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, ShareModule, AppRoutesModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), , BrowserAnimationsModule, ShareModule, AppRoutesModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

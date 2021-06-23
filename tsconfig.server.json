@@ -1,0 +1,33 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "./dist/app-server",
+    "module": "commonjs",
+    "types": [
+      "node"
+    ],
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "baseUrl": "./",
+    "incremental": true,
+    "paths": {
+      "@ng-nest/api/core": [
+        "./api/src/core"
+      ]
+    }
+  },
+  "files": [
+    "server.ts"
+  ],
+  "angularCompilerOptions": {
+    "entryModule": "./ui/src/app/app.server.module#AppServerModule"
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
